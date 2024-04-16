@@ -26,9 +26,9 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blue,
               textColor: Colors.white,
               onPressed: () {
-                Get.to( FirstPage());
+                Get.to(FirstPage());
               },
-              child: const Text('Go to First page'),
+              child: const Text('Go to GetBuilder page'),
             ),
           ),
           const Spacer(),
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               color: Colors.red,
               textColor: Colors.white,
               onPressed: () {
-                Get.to( const SecondPage());
+                Get.to( SecondPage());
               },
               child: const Text('Go to second page'),
             ),
@@ -48,9 +48,9 @@ class _HomePageState extends State<HomePage> {
               color: Colors.cyan,
               textColor: Colors.white,
               onPressed: () {
-                Get.to( const ThreePage());
+                Get.to(ThreePage());
               },
-              child: const Text('Go to Three page'),
+              child: const Text('Go to Getx page'),
             ),
           ),
           const Spacer(),
@@ -59,9 +59,9 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blue,
               textColor: Colors.white,
               onPressed: () {
-                Get.to( const FourPage());
+                Get.to(FourPage());
               },
-              child: const Text('Go to Four page'),
+              child: const Text('Go to update page'),
             ),
           ),
           const Spacer(),
