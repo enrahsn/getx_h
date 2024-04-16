@@ -1,0 +1,53 @@
+import '../widgets/card.dart';
+import '../screens/detail.dart';
+import '../models/product.dart';
+import '../constant/constant.dart';
+import 'package:flutter/material.dart';
+
+class MyHomeBody extends StatelessWidget {
+  const MyHomeBody({super.key, required String title});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      bottom: false,
+      child: Column(
+        children: [
+          SizedBox(height: kVPadding),
+          Expanded(
+            child: Stack(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: kVPadding * 7),
+                  decoration: const BoxDecoration(
+                    color: kBg2Color,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
+                    ),
+                  ),
+                ),
+                ListView.builder(
+                  itemCount: products.length,
+                  itemBuilder: (context, index) => ProductCard(
+                    itemIndex: index,
+                    product: products[index],
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              DetailsScreen(product: products[index]),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
