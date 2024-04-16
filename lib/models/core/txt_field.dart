@@ -1,6 +1,6 @@
 // import '../core/colors.dart';
 import 'package:flutter/material.dart';
-import '../core/colors.dart';
+import 'core/colors.dart';
 class MyTxtField extends StatelessWidget {
   const MyTxtField({super.key,  this.hint, this.maxLines=1});
   final String? hint;

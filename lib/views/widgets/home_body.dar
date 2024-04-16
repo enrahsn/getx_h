@@ -1,7 +1,7 @@
-import '../widgets/card.dart';
-import '../screens/detail.dart';
-import '../models/product.dart';
-import '../constant/constant.dart';
+import '../../widgets/card.dart';
+import '../../screens/detail.dart';
+import '../../models/product.dart';
+import '../../constant/constant.dart';
 import 'package:flutter/material.dart';
 
 class MyHomeBody extends StatelessWidget {

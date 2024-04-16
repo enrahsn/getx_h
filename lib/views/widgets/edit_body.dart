@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/app_bar.dart';
-import '../models/txt_field.dart';
+import '../../models/app_bar.dart';
+import '../../models/txt_field.dart';
 
 class EditNoteViewBody extends StatelessWidget {
   const EditNoteViewBody({super.key});

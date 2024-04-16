@@ -1,7 +1,7 @@
-import '../screens/third_screen.dart';
-import '../screens/home_screen_2.txt';
+import '../../screens/third_screen.dart';
+import '../../screens/home_screen_2.txt';
 import 'package:flutter/material.dart';
-import '../screens/second_screen.dart';
+import '../../screens/second_screen.dart';
 
 class MyMenuItems extends StatelessWidget {
   const MyMenuItems({super.key});

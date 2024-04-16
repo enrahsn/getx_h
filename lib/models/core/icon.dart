@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../core/colors.dart';
+import 'core/colors.dart';
 
 class MyIcon extends StatelessWidget {
   const MyIcon({super.key,  this.icon});

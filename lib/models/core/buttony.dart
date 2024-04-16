@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../core/colors.dart';
-import '../core/size_config.dart';
+import 'core/colors.dart';
+import 'core/size_config.dart';
 
 class MyButton extends StatelessWidget {
   const MyButton({super.key, this.txt});
