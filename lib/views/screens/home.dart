@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key, required this.counter});
+  const HomePage({super.key, });
 
-  int counter = 0;
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                     )),
               ),
               Text(
-                "${widget.counter}",
+                "$counter",
                 style:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
