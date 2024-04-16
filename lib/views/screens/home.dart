@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-    HomePage({super.key, 
-    required this.counter
-  });
+class HomePage extends StatefulWidget {
+  HomePage({super.key, required this.counter});
 
   int counter = 0;
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,23 +22,32 @@ class HomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
+              Container(
                 padding: const EdgeInsets.all(20),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                      counter++;
+                      });
+                    },
                     icon: const Icon(
                       Icons.add,
                       size: 33,
                     )),
               ),
               Text(
-                "$counter",
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                "${widget.counter}",
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        counter--;
+                      });
+                    },
                     icon: const Icon(
                       Icons.remove,
                       size: 33,
