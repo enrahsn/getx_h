@@ -14,7 +14,7 @@ int counter = 0;
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: const Text('Getx App'),
+        title: const Text('GetBuilder'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
