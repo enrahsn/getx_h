@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/card.dart';
+import '../../models/core/card.dart';
 
 class MyListView extends StatelessWidget {
   const MyListView({super.key});

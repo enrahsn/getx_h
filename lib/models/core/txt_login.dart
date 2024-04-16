@@ -1,5 +1,6 @@
-import 'core/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../constant/colors.dart';
 
 class MyTextLogin extends StatelessWidget {
     const MyTextLogin({super.key, required Null Function() onPressed, this.txt, this.login, this.scrName,});

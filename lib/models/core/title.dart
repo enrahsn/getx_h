@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'core/colors.dart';
+
+import '../constant/colors.dart';
 
 
 class MyTitle extends StatelessWidget {
