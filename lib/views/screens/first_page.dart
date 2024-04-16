@@ -1,42 +1,41 @@
+
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key, });
+import 'package:get/get.dart';
 
+import '../../controller/home_ctrl.dart';
+// ignore: must_be_immutable
+class FirstPage extends StatelessWidget {
+  FirstPage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int counter = 0;
+//الاسرع
+int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
         title: const Text('Getx App'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
+       GetBuilder<HomeCtrl>(
+          init: HomeCtrl(),
+          builder: (controller)=> Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 padding: const EdgeInsets.all(20),
                 child: IconButton(
                     onPressed: () {
-                      setState(() {
-                      counter++;
-                      });
-                    },
+                      controller.increment();
+                      },
                     icon: const Icon(
                       Icons.add,
                       size: 33,
-                    )),
-              ),
+                    ))),
               Text(
-                "$counter",
+                "${controller.counter}",
                 style:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
@@ -44,9 +43,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(20),
                 child: IconButton(
                     onPressed: () {
-                      setState(() {
-                        counter--;
-                      });
+                      controller.decrement() ;
                     },
                     icon: const Icon(
                       Icons.remove,
@@ -54,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                     )),
               ),
             ],
-          ),
+          ),)
         ],
       ),
     );
