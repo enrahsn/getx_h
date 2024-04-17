@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../controller/home_ctrl.dart';
 import 'first_page.dart';
+import 'five_page copy.dart';
 import 'second_page.dart';
 import 'three_page.dart';
 import 'four_page.dart';
+import 'zero_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, });
@@ -11,6 +14,8 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
+  final controller = Get.lazyPut(()=>HomeCtrl());
+
   int counter = 0;
   @override
   Widget build(BuildContext context) {
@@ -26,23 +31,45 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blue,
               textColor: Colors.white,
               onPressed: () {
+                Get.to(ZeroPage());
+              },
+              child: const Text('Go to ZeroPage page'),
+            ),
+          ),
+          const Spacer(),
+           Center(
+            child: MaterialButton(
+              color: Colors.red,
+              textColor: Colors.white,
+              onPressed: () {
+                Get.to(()=> const FivePage());
+              },
+              child: const Text('Go to Five page'),
+            ),
+          ),
+          const Spacer(), Center(
+            child: MaterialButton(
+              color: Colors.red,
+              textColor: Colors.white,
+              onPressed: () {
+                Get.to(()=> const SecondPage());
+              },
+              child: const Text('Go to second page'),
+            ),
+          ),
+          const Spacer(),
+          Center(
+            child: MaterialButton(
+              color: Colors.blue,
+              textColor: Colors.white,
+              onPressed: () {
                 Get.to(FirstPage());
               },
               child: const Text('Go to GetBuilder page'),
             ),
           ),
           const Spacer(),
-          Center(
-            child: MaterialButton(
-              color: Colors.red,
-              textColor: Colors.white,
-              onPressed: () {
-                Get.to( SecondPage());
-              },
-              child: const Text('Go to second page'),
-            ),
-          ),
-          const Spacer(),
+         
           Center(
             child: MaterialButton(
               color: Colors.cyan,
@@ -65,42 +92,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const Spacer(),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     Container(
-          //       padding: const EdgeInsets.all(20),
-          //       child: IconButton(
-          //           onPressed: () {
-          //             setState(() {
-          //             counter++;
-          //             });
-          //           },
-          //           icon: const Icon(
-          //             Icons.add,
-          //             size: 33,
-          //           )),
-          //     ),
-          //     Text(
-          //       "$counter",
-          //       style:
-          //           const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          //     ),
-          //     Padding(
-          //       padding: const EdgeInsets.all(20),
-          //       child: IconButton(
-          //           onPressed: () {
-          //             setState(() {
-          //               counter--;
-          //             });
-          //           },
-          //           icon: const Icon(
-          //             Icons.remove,
-          //             size: 33,
-          //           )),
-          //     ),
-          //   ],
-          // ),
         ],
       ),
     );
